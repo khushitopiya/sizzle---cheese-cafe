@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./assets/logo-dark.png" type="image/x-icon">
+    <title>Cheese and Chili</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="#">
+                        <img src="assets/logo-dark.png" alt="logo" class="nav__logo-dark" />
+                        <img src="assets/logo-white.png" alt="logo" class="nav__logo-white" />
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#special">SPECIAL</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="section__container header__container" id="home">
+            <div class="header__image">
+                <img src="assets/header.png" alt="header">
+            </div>
+            <div class="header__content">
+                <h2>IT IS GOOD TIME FOR THE GREAT TASTE OF Sandwich</h2>
+                <h1>Cheese & Chili<br><span>WEEK</span></h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="gallery">
+        </section>
+        <div class="popup-image" id="popup-image">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </main>
+    
+    <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+          <div class="footer__logo">
+            <img src="assets/logo-white.png" alt="logo" />
+          </div>
+          <div class="footer__content">
+            <p>
+              Welcome to Cheese & Chili, where a love for bold flavors and exceptional culinary experiences come together. Our story is one of dedication to crafting the ultimate cheese and chili creations, from sourcing the freshest ingredients to delivering an explosion of taste in every bite. Join us on a flavorful journey and indulge in the perfect blend of creamy cheese and spicy chili, meticulously crafted to satisfy your cravings.
+            </p>
+            <div>
+              <ul class="footer__links">
+                <li>
+                  <span><i class="ri-map-pin-2-fill"></i></span>
+                  Koramangala, Bangalore, 560095
+                </li>
+                <li>
+                  <span><i class="ri-mail-fill"></i></span>
+                  cheese&chili@gmail.com
+                </li>
+              </ul>
+              <div class="footer__socials">
+                <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                <a href="#"><i class="ri-instagram-fill"></i></a>
+                <a href="#"><i class="ri-twitter-fill"></i></a>
+                <a href="#"><i class="ri-whatsapp-fill"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+    <script src="gallery.js"></script>
+    <script>
+        document.querySelectorAll('.gallery img').forEach(image => {
+            image.onclick = () => {
+
+                document.querySelector('.popup-image').style.display = "block";
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+
+        })
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/logo-dark.png" type="image/x-icon">
+    <title>sizzle & cheese cafe</title>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="nav__header">
+                <div class="nav__logo">
+                    <a href="#">
+                        <img src="assets/logo-dark.png" alt="logo" class="nav__logo-dark" />
+                        <img src="assets/logo-white.png" alt="logo" class="nav__logo-white" />
+                    </a>
+                </div>
+                <div class="nav__menu__btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#special">SPECIAL</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+        </nav>
+        <div class="section__container header__container" id="home">
+            <div class="header__image">
+                <img src="assets/header.png" alt="header">
+            </div>
+            <div class="header__content">
+                <h2>IT IS GOOD TIME FOR THE GREAT TASTE OF Sandwich</h2>
+                <h1>Pepper & Cheese<br><span>WEEK</span></h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="section__container banner__container" id="special">
+        <div class="banner__card">
+            <p>TRY IT OUT TODAY</p>
+            <h4>MOST POPULAR<br> Cheese Chili Pizza</h4>
+        </div>
+        <div class="banner__card">
+            <p>TRY IT OUT TODAY</p>
+            <h4>Cheese Chili<br> Burger</h4>
+        </div>
+        <div class="banner__card">
+            <p>TRY IT OUT TODAY</p>
+            <h4>FRESH & CHILI</h4>
+        </div>
+    </section>
+
+    <section class="reservation">
+        <div class="section__container reservation__container">
+            <h3>RESERVATION</h3>
+            <h2 class="section__header">BOOK YOUR TABLE</h2>
+            <form id="reservationForm" action="#" onsubmit="handleReservation(event)">
+                <input type="text" placeholder="NAME" required>
+                <input type="email" placeholder="EMAIL" required>
+                <input type="date" placeholder="DATE" required>
+                <input type="time" placeholder="TIME" required>
+                <input type="number" placeholder="PEOPLE" required>
+                <button class="btn" type="submit">BOOK YOUR TABLE</button>
+            </form>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <p>Your table booked successfully</p>
+            </div>
+        </div>
+
+        <img src="assets/reservation-bg-1.png" alt="reservation" class="reservation__bg-1">
+        <img src="assets/reservation-bg-2.png" alt="reservation" class="reservation__bg-2">
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+            <div class="footer__logo">
+                <img src="assets/logo-white.png" alt="logo">
+            </div>
+            <div class="footer__content">
+                <p>Welcome to sizzle & cheese cafe, where a love for bold flavors and exceptional culinary experiences come together. Our story is one of dedication to crafting the ultimate sizzle & cheese cafe creations, from sourcing the freshest ingredients to delivering an explosion of taste in every bite. Join us on a flavorful journey and indulge in the perfect blend of creamy cheese and spicy chilli, meticulously crafted to satisfy your cravings.</p>
+                <div>
+                    <P>&copy; 2024 sizzle & cheese cafe. All rights reserved by Khushi Topiya</P>
+
+                    
+                    <ul class="footer__links">
+                        <li><span><i class="ri-map-pin-2-fill"></i></span> Dhoraji, Gujrat, 360-410</li>
+                        <li><span><i class="ri-mail-fill"></i></span> sizzleandcheesecafe@gmail.com</li>
+                    </ul>
+                    
+                    <div class="footer__socials">
+                        <a href="#"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-whatsapp-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+    <script>
+        function handleReservation(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('reservationForm').reset();
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
